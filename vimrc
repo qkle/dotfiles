@@ -14,7 +14,9 @@ set hlsearch
 set incsearch
 
 " https://www.reddit.com/r/vim/wiki/tabstop 
-set tabstop=8
+" http://vimcasts.org/episodes/tabs-and-spaces/
+" Keep tabstop = softtabstop = shiftwidth for most convinient and consistent
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
