@@ -8,6 +8,10 @@ filetype plugin on
 set bg=dark
 set cursorline
 
+" Set ColorColumn for aligning text at max 79 characters
+set colorcolumn=79
+highlight ColorColumn ctermbg=DarkGray
+
 " Automatic toggling between line number modes
 " https://jeffkreeftmeijer.com/vim-number/
 set number relativenumber
