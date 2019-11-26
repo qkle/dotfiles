@@ -8,9 +8,9 @@ filetype plugin on
 set bg=dark
 set cursorline
 
-" Set ColorColumn for aligning text at max 79 characters
-set colorcolumn=79
-highlight ColorColumn ctermbg=LightGray guibg=LightGray
+" Set ColorColumn=80 for aligning text at max 79 characters
+set colorcolumn=80
+highlight ColorColumn ctermbg=Gray guibg=Gray
 
 " Automatic toggling between line number modes
 " https://jeffkreeftmeijer.com/vim-number/
