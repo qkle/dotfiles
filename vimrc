@@ -7,6 +7,7 @@ filetype plugin on
 
 set bg=dark
 set number
+set relativenumber
 set cursorline
 
 " enable hilight_search and increasing_search
