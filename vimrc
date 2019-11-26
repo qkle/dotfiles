@@ -6,9 +6,17 @@ syntax enable
 filetype plugin on
 
 set bg=dark
-set number
-set relativenumber
 set cursorline
+
+" Automatic toggling between line number modes
+" https://jeffkreeftmeijer.com/vim-number/
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 " enable hilight_search and increasing_search
 set hlsearch
