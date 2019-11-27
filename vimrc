@@ -11,7 +11,7 @@ set cursorline
 
 " Set ColorColumn=80 for aligning text at max 79 characters
 set colorcolumn=80
-highlight ColorColumn ctermbg=Gray guibg=Gray
+highlight ColorColumn ctermbg=Yellow guibg=Yellow
 
 " Automatic toggling between line number modes
 " https://jeffkreeftmeijer.com/vim-number/
