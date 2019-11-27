@@ -5,6 +5,7 @@ set nocompatible
 syntax enable
 filetype plugin on
 
+
 set bg=dark
 set cursorline
 
@@ -65,3 +66,17 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR><CR>}<Esc>ki<Tab>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+"""""""""""""""""""""""""""""""""" VIM-PLUG """""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+Plug 'christoomey/vim-tmux-navigator'
+
+" Initialize plugin system
+call plug#end()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
