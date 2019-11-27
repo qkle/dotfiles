@@ -41,6 +41,9 @@ set autoindent
 set splitbelow
 set splitright
 
+" Automatically rebalance windows on vim resize for using with tmux splits
+autocmd VimResized * :wincmd =
+
 " FINDING FILES:
 
 " Search down into subfolders
