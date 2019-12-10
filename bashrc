@@ -43,7 +43,8 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -56,14 +57,61 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+###############################################################################
+####################### COLOR PROMPT CONFIGURE ################################
+###############################################################################
+# Special Characters:
+#	\h	the hostname up to the first "."
+#	\n	new line
+#	\s	the name of the shell
+#	\t	the current time in 24-hour format
+#	\u	the username of the current user
+#	\w	the current working directory
+#	\W	the basename of the current working directory
+#	\[ \]	Wrapping commands between these special escapes for proper cursor
 
-color_prompt=yes
+# My promt preset
+# https://www.youtube.com/watch?v=LXgXV7YmSiU&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c&index=9
+reset="\033[00m"
+
+# Colors
+# https://opensource.com/article/19/9/linux-terminal-colors
+gray="\033[30m"
+red="\033[31m"
+green="\033[32m"
+yellow="\033[33m"
+blue="\033[34m"
+purple="\033[35m"
+teal="\033[36m"
+white="\033[37m"
+
+# Styles
+# https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
+bold="\033[01m"
+italic="\033[03m"
+underline="\033[04m"
+slow_blink="\033[05m"
+rapid_blink="\033[06m"
+cross_out="\033[09m"
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n$ '
+    PS1='${debian_chroot:+($debian_chroot)}'
+    PS1+="\[${bold}\]"
+    PS1+="\[${teal}\]\u"		# username
+    PS1+="\[${gray}\]@"
+    PS1+="\[${yellow}\]\h"		# hostname
+    PS1+="\[${gray}\]:"
+    PS1+="\[${blue}\]\w"		# current working directory
+    PS1+="\[${white}\]\n"
+    PS1+="$ "
+    PS1+="\[${reset}\]"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
+###############################################################################
+######################## END COLOR PROMPT CONFIGURE ###########################
+###############################################################################
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
