@@ -71,6 +71,17 @@ inoremap { {}<left>
 inoremap {<CR> {<CR><CR>}<Esc>ki<Tab>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""" NERDTREE CONFIG """"""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MAP KEY FOR TOGGLING NERDTREE:
+map <C-n> :NERDTreeToggle<CR>
+
+" CLOSE VIM IF THE ONLY WINDOW LEFT OPEN IS A NERDTREE:
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 """""""""""""""""""""""""""""""""" VIM-PLUG """""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,6 +90,7 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'scrooloose/nerdtree'
 
 " Initialize plugin system
 call plug#end()
