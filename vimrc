@@ -63,12 +63,12 @@ set wildmenu
 
 
 " AUTOMATIC CLOSING BRACKET: 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR><CR>}<Esc>ki<Tab>
+""inoremap " ""<left>
+""inoremap ' ''<left>
+""inoremap ( ()<left>
+""inoremap [ []<left>
+""inoremap { {}<left>
+""inoremap {<CR> {<CR><CR>}<Esc>ki<Tab>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,6 +91,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
+Plug 'Townk/vim-autoclose'
 
 " Initialize plugin system
 call plug#end()
