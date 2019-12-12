@@ -70,6 +70,10 @@ set wildmenu
 ""inoremap { {}<left>
 ""inoremap {<CR> {<CR><CR>}<Esc>ki<Tab>
 
+" Easier moving of code blocks
+vnoremap < <gv 
+vnoremap > >gv
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""" PLUGIN CONFIG TEMPLATE """""""""""""""""""""""""
