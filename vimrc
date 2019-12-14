@@ -26,7 +26,7 @@ augroup END
 set hlsearch
 set incsearch
 
-" https://www.reddit.com/r/vim/wiki/tabstop 
+" https://www.reddit.com/r/vim/wiki/tabstop
 " http://vimcasts.org/episodes/tabs-and-spaces/
 " Keep tabstop = softtabstop = shiftwidth for most convinient and consistent
 set tabstop=4
@@ -61,7 +61,7 @@ set wildmenu
 " - :b lets you autocomplete any open buffer
 
 
-" AUTOMATIC CLOSING BRACKET: 
+" AUTOMATIC CLOSING BRACKET:
 ""inoremap " ""<left>
 ""inoremap ' ''<left>
 ""inoremap ( ()<left>
@@ -70,7 +70,7 @@ set wildmenu
 ""inoremap {<CR> {<CR><CR>}<Esc>ki<Tab>
 
 " Easier moving of code blocks
-vnoremap < <gv 
+vnoremap < <gv
 vnoremap > >gv
 
 
@@ -111,11 +111,26 @@ let g:NERDCommentEmptyLines = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Select theme from
 " https://github.com/vim-airline/vim-airline/wiki/Screenshots
+" Favourite themes:
+"	- minimalist
+"	- peaksea
+"	- seagull
+"	- distinguished
+"	- ravenpower
 let g:airline_theme='minimalist'
+
+" Enable powerline fonts in vim-airline
+let g:airline_powerline_fonts = 1
+
+" Automatically displays all buffers when there's only one tab open
+let g:airline#extensions#tabline#enabled = 1
+
+" Show buffer number in the tab line
+let g:airline#extensions#tabline#buffer_nr_show = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""" VIM-PLUG """""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Specify a directory for plugins
