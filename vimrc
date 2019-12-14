@@ -140,6 +140,7 @@ let g:NERDCommentEmptyLines = 1
 let g:airline_theme='minimalist'
 
 " Enable powerline fonts in vim-airline
+" Need to install powerline-fonts https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
 
 " Automatically displays all buffers when there's only one tab open
