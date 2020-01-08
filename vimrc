@@ -136,3 +136,17 @@ autocmd VimResized * :wincmd =
 vnoremap < <gv
 vnoremap > >gv
 " =============================================================================
+
+
+" =============================================================================
+" Local settings for editing different filetypes
+" =============================================================================
+" gitcommit
+autocmd FileType gitcommit setlocal textwidth=72
+autocmd FileType gitcommit setlocal colorcolumn=51,73
+
+" P4 source code
+autocmd FileType p4 setlocal cindent
+autocmd FileType p4 setlocal cino=(0
+autocmd FileType p4 setlocal commentstring=//\ %s
+" =============================================================================
