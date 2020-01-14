@@ -21,6 +21,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 
+" -----------------------------------------------------------------------------
+" Markdown Editing
+" -----------------------------------------------------------------------------
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 " Initialize plugin system. Plugins become visible to Vim after this call
 call plug#end()
 
