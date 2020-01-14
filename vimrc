@@ -12,6 +12,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
 
 " -----------------------------------------------------------------------------
 " Appearance
