@@ -6,13 +6,6 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins. Make sure you use single quotes
 " -----------------------------------------------------------------------------
-" FZF 
-" -----------------------------------------------------------------------------
-" -----------------------------------------------------------------------------
-" PlugInstall & PlugUpdate will clone fzf in ~/.fzf and run the install script
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " General
 " -----------------------------------------------------------------------------
 Plug 'christoomey/vim-tmux-navigator'
@@ -21,6 +14,14 @@ Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
+Plug 'dense-analysis/ale'
+
+" -----------------------------------------------------------------------------
+" FZF 
+" -----------------------------------------------------------------------------
+" PlugInstall & PlugUpdate will clone fzf in ~/.fzf and run the install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " -----------------------------------------------------------------------------
 " Appearance
