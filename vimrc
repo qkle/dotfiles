@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/vim-easy-align'
+Plug 'easymotion/vim-easymotion'
 
 " -----------------------------------------------------------------------------
 " FZF 
