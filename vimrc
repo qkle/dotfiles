@@ -13,16 +13,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'dense-analysis/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
-
-" -----------------------------------------------------------------------------
-" FZF 
-" -----------------------------------------------------------------------------
-" PlugInstall & PlugUpdate will clone fzf in ~/.fzf and run the install script
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 
 " -----------------------------------------------------------------------------
 " Appearance
@@ -30,6 +22,18 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
+
+" -----------------------------------------------------------------------------
+" FZF
+" -----------------------------------------------------------------------------
+" PlugInstall & PlugUpdate will clone fzf in ~/.fzf and run the install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" -----------------------------------------------------------------------------
+" IDE features
+" -----------------------------------------------------------------------------
+Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " -----------------------------------------------------------------------------
@@ -57,11 +61,6 @@ call plug#end()
 " =============================================================================
 " Plugins Config
 " =============================================================================
-" -----------------------------------------------------------------------------
-" FZF
-" -----------------------------------------------------------------------------
-set rtp+=~/.fzf
-
 " -----------------------------------------------------------------------------
 " NERDTree
 " -----------------------------------------------------------------------------
@@ -102,6 +101,12 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show buffer number in the tab line
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" -----------------------------------------------------------------------------
+" FZF
+" -----------------------------------------------------------------------------
+set rtp+=~/.fzf
+
 " -----------------------------------------------------------------------------
 " ALE
 " -----------------------------------------------------------------------------
