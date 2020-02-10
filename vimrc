@@ -103,6 +103,17 @@ let g:airline#extensions#tabline#enabled = 1
 " Show buffer number in the tab line
 let g:airline#extensions#tabline#buffer_nr_show = 1
 " -----------------------------------------------------------------------------
+" ALE
+" -----------------------------------------------------------------------------
+" Explicitly set linters for specific languages
+let g:ale_linters = {
+			\'python': ['flake8'],
+			\}
+
+" Show the linter name before the error messages
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+
+" -----------------------------------------------------------------------------
 " CoC
 " -----------------------------------------------------------------------------
 " if hidden is not set, TextEdit might fail.
