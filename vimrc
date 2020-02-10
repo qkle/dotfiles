@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 " -----------------------------------------------------------------------------
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
