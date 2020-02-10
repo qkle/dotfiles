@@ -71,6 +71,15 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " -----------------------------------------------------------------------------
+" vim-easy-align
+" -----------------------------------------------------------------------------
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" -----------------------------------------------------------------------------
 " vim-airline
 " -----------------------------------------------------------------------------
 " Select theme from
