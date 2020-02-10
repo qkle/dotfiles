@@ -13,8 +13,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
 Plug 'dense-analysis/ale'
+Plug 'junegunn/vim-easy-align'
 
 " -----------------------------------------------------------------------------
 " FZF 
