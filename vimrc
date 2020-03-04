@@ -115,6 +115,18 @@ let g:ale_linters = {
 			\'python': ['flake8'],
 			\}
 
+" Only run linters when files are saved
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
+
+" Explicitly set fixers for specific languages
+let g:ale_fixers = {
+			\'*': ['remove_trailing_lines', 'trim_whitespace'],
+			\'python': ['black'],
+			\}
+let g:ale_fix_on_save = 1
+
 " Show the linter name before the error messages
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 
