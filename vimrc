@@ -46,6 +46,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " -----------------------------------------------------------------------------
 " Markdown Editing
 " -----------------------------------------------------------------------------
+" Require nodejs and yarn pre-install
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Initialize plugin system. Plugins become visible to Vim after this call
