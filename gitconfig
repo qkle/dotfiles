@@ -1,0 +1,7 @@
+[user]
+	name = qkle
+	email = quockhanh.dn@gmail.com
+[core]
+	editor = vim
+[alias]
+	ls = log --all --graph --decorate --oneline
