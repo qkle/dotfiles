@@ -1,0 +1,3 @@
+alias up='sudo apt update && sudo apt upgrade'
+alias mysudo='sudo -E env "PATH=$PATH"'
+alias neofetch='clear && neofetch'
