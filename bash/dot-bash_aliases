@@ -1,3 +1,4 @@
 alias up='sudo apt update && sudo apt upgrade'
 alias mysudo='sudo -E env "PATH=$PATH"'
 alias neofetch='clear && neofetch'
+alias mpvhd='mpv --ytdl-format="bestvideo[height<=1080][vcodec!=vp9]+bestaudio/best" '
