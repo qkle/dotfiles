@@ -1,4 +1,20 @@
+# prompt before executing command
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+# clear terminal before displaying system info'
+alias neofetch='clear && neofetch'
+
+# custom aliases
 alias up='sudo apt update && sudo apt upgrade'
 alias mysudo='sudo -E env "PATH=$PATH"'
-alias neofetch='clear && neofetch'
 alias mpvhd='mpv --ytdl-format="bestvideo[height<=1080][vcodec!=vp9]+bestaudio/best" '
+
+# ffmpeg recording
+alias record-webcam='ffmpeg -y -i /dev/video0 -f alsa -i default '
+alias record-sound='ffmpeg -y -f alsa -i default '
+alias screencast-left='ffmpeg -y -f x11grab -s 1920x1080 -i :0.0 -f alsa -i default '
+alias screencast-right='ffmpeg -y -f x11grab -s 1920x1080 -i :0.0+1920 -f alsa -i default '
+# auto detect resolution screencast
+# alias screencast='ffmpeg -y -f x11grab -s $(xdpyinfo | grep dimensions | awk '{print $2;}') -i :0.0 -f alsa -i default '
