@@ -4,7 +4,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 # clear terminal before displaying system info'
-alias neofetch='clear && neofetch'
+alias neo='clear && neofetch'
 
 # custom aliases
 alias up='sudo apt update && sudo apt upgrade'
