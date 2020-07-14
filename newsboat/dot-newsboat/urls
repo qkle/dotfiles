@@ -2,7 +2,9 @@
 https://itsfoss.com/feed/ "~Newsfeed: It's FOSS"
 
 -------------------------------------------------------------------------------
-https://vnexpress.net/rss/tin-moi-nhat.rss "~VietnameseNews: VnExpress"
+https://vnexpress.net/rss/tin-moi-nhat.rss "~VNews: VnExpress" VNews
+https://tuoitre.vn/rss/tin-moi-nhat.rss "~VNews: TuoiTre" VNews
+https://thanhnien.vn/rss/home.rss "~VNews: ThanhNien" VNews
 
 -------------------------------------------------------------------------------
 https://www.reddit.com/r/sffpc/.rss "~Reddit: r/sffpc" Reddit
@@ -13,7 +15,9 @@ https://www.reddit.com/r/archlinux/.rss "~Reddit: r/archlinux" Reddit
 https://www.reddit.com/r/freebsd/.rss "~Reddit: r/freebsd" Reddit
 
 -------------------------------------------------------------------------------
-https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ "~Youtube: MKBHD" Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ "~Youtube: Marques Brownlee" Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVYamHliCI9rw1tHR1xbkfw "~Youtube: Dave Lee" Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRYOj4DmyxhBVrdvbsUwmAA "~Youtube: Optimum Tech" Youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCfsOfLvadg89Bx8Sv_6WERg "~Youtube: NoobFromUA" Youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UC_DmCvOP5Q_eBMRDvqqRXjg "~Youtube: Pianote" Youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Youtube: Luke Smith" Youtube

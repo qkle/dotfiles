@@ -10,6 +10,7 @@ alias neo='clear && neofetch'
 alias up='sudo apt update && sudo apt upgrade'
 alias mysudo='sudo -E env "PATH=$PATH"'
 alias mpvhd='mpv --ytdl-format="bestvideo[height<=1080][vcodec!=vp9]+bestaudio/best" '
+alias news='newsboat'
 
 # ffmpeg recording
 alias record-webcam='ffmpeg -y -i /dev/video0 -f alsa -i default '
