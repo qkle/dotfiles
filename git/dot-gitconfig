@@ -5,3 +5,5 @@
 	editor = vim
 [alias]
 	ls = log --all --graph --decorate --oneline
+[credential]
+	helper = cache
