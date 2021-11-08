@@ -1,0 +1,57 @@
+# Swinburne host
+Host rule
+    Hostname ruleprimary1.i4t.swin.edu.au
+    User qkle
+    Port 22
+
+Host netcontrol
+    Hostname netcontrol.ict.swin.edu.au
+    User qkle
+
+# # Unix RULE 2020-S2
+Host rule100
+    Hostname rule100.i4t.swin.edu.au
+    User student
+    Port 22
+
+# Host rule80
+#     Hostname rule80.i4t.swin.edu.au
+#     User student
+#     Port 22
+
+# Host rule130
+#     Hostname rule130.i4t.swin.edu.au
+#     User student
+#     Port 22
+
+# Local hosts
+# Host router
+#     Hostname 192.168.1.1
+#     User qkle
+#     Port 2222
+
+Host pi
+    Hostname 192.168.1.11
+    User pi
+    Port 22
+
+# Host l430
+#     HostName 192.168.1.100
+#     User qkle
+#     Port 22
+
+# VirtualBox hosts
+# Host p4-18
+#     Hostname 127.0.0.1
+#     User qkle
+#     Port 22101
+
+# Host p4
+#     Hostname 127.0.0.1
+#     User qkle
+#     Port 22102
+
+# Host ngsdn
+#     Hostname 127.0.0.1
+#     User sdn
+#     Port 2322
