@@ -27,6 +27,7 @@ alias mysudo='sudo -E env "PATH=$PATH"'
 alias mpvhd='mpv --ytdl-format="bestvideo[height<=1080][vcodec!=vp9]+bestaudio/best"'
 alias ali='batcat ~/.bash_aliases'
 alias news='newsboat'
+alias bat='batcat'
 
 # ffmpeg recording
 alias record-webcam='ffmpeg -y -i /dev/video0 -f alsa -i default '
