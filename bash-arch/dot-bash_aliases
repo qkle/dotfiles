@@ -19,7 +19,7 @@ man() {
 }
 
 # clear terminal before displaying system info'
-alias neo='clear && neofetch'
+alias fet='clear && fastfetch'
 
 # custom aliases
 alias up='sudo pacman -Syu'
