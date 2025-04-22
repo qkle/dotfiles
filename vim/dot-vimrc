@@ -177,9 +177,6 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 
-" Copy indent from current line when starting a new line
-set autoindent
-
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
