@@ -175,7 +175,7 @@ set incsearch
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
