@@ -2,6 +2,9 @@
 -- NOTE: You can change these options as you wish!
 -- For more options, you can see `:help option-list`
 
+-- Enable 24-bit RGB color in the TUI for colorscheme to work in tmux in Windows Terminal
+vim.opt.termguicolors = true
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
