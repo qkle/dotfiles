@@ -1,8 +1,8 @@
 -- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
 -- For more options, you can see `:help option-list`
 
--- Enable 24-bit RGB color in the TUI for colorscheme to work in tmux in Windows Terminal
+-- Enable 24-bit RGB color in the TUI for colorscheme to work properly in tmux
+-- in Windows Terminal
 vim.opt.termguicolors = true
 
 -- Make line numbers default
@@ -27,7 +27,7 @@ vim.opt.smartcase = true
 -- See `:help 'list'`
 -- and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Understand tab "default" configuration behavior
 -- https://www.reddit.com/r/vim/wiki/tabstop
@@ -38,7 +38,7 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
--- Every wrapped line will continue visually indented to preserve horizontal blocks of text.
+-- Wrapped lines are visually indented to preserve horizontal blocks of text
 vim.opt.breakindent = true
 
 -- Save undo history
@@ -47,15 +47,10 @@ vim.opt.breakindent = true
 -- Keep signcolumn on by default
 -- vim.opt.signcolumn = 'yes'
 
--- Preview substitutions live, as you type!
--- vim.opt.inccommand = 'split'
-
--- Minimal number of screen lines to keep above and below the cursor
--- vim.opt.scrolloff = 10
-
--- If performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
--- instead raise a dialog asking if you wish to save the current file(s)
--- See `:help 'confirm'`
--- vim.opt.confirm = true
-
-
+-- Sync clipboard between OS and Neovim.
+-- Schedule the setting after `UiEnter` because it can increase startup-time.
+-- Remove this option if you want your OS clipboard to remain independent.
+-- See `:help 'clipboard'`
+vim.schedule(function()
+    vim.opt.clipboard = 'unnamedplus'
+end)

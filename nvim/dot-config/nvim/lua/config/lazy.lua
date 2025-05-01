@@ -1,11 +1,17 @@
 -- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 
--- Structured Setup
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    local out = vim.fn.system({ 
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--branch=stable",
+        lazyrepo,
+        lazypath
+    })
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
@@ -18,61 +24,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
--- vim.g.mapleader = " "
--- vim.g.maplocalleader = "\\"
-
--- [[ Configure and install plugins ]]
---
--- To check the current status of your plugins, run
--- :Lazy
---
--- You can press `?` in this menu for help. Use `:q` to close the window
---
--- To update plugins you can run
--- :Lazy update
---
--- List of plugins from kickstart.nvim
--- tpope/vim-sleuth,
--- lewis6991/gittsigns.nvim,
--- folke/which-key.nvim,
--- nvim-telescope/telescope.nvim,
---      nvim-luaplenary.nvim,
---      nvim-telescope/telescope-fzf-native.nvim,
---      nvim-telescope/telescope-ui-select.nvim,
---      nvim-tree/nvim-web-devicons,
--- folke/lazydev.nvim,
--- neovim/nvim-lspconfig,
---      williamboman/mason.nvim,
---      williamboman/mason-lspconfig.nvim,
---      WhoIsSethDaniel/mason-tool-installer.nvim,
---      j-hui/fidget.nvim,
---      saghen/blink.cmp,
--- stevearc/conform.nvim,
--- saghenblink.cmp,
---      L3MON4D3/LuaSnip,
--- folke/tokyonight.nvim,
--- folke/todo-comments.nvim,
--- echasnovski/mini.nvim,
--- nvim-treesitter/nvim-treesitter,
-
 -- Setup lazy.nvim
 require("lazy").setup({
-    -- spec = {
-    --     -- import your plugins
-    --     -- { import = "plugins" },
-    -- },
-    -- -- Configure any other settings here. See the documentation for more details.
-    -- -- colorscheme that will be used when installing plugins.
-    -- install = { colorscheme = { "habamax" } },
-    -- -- automatically check for plugin updates
-    -- checker = { enabled = true },
 
-   {
+    -- Create key bindings that stick. WhichKey helps you remember your Neovim
+    -- keymaps, by showing available keybindings in a popup as you type.
+    {
         "folke/which-key.nvim",
-        enabled = true,
         event = "VeryLazy",
         opts = {
             -- your configuration comes here
@@ -90,6 +48,8 @@ require("lazy").setup({
         },
     },
 
+    -- Seamless navigation between tmux panes and vim splits using a consistent
+    -- set of hotkeys.
     {
         "christoomey/vim-tmux-navigator",
         cmd = {
@@ -107,6 +67,30 @@ require("lazy").setup({
             { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
             { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
         },
+    },
+
+    -- Highly extendable fuzzy finder over lists
+    {
+        "nvim-telescope/telescope.nvim",
+        branch = "0.1.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            {
+                "nvim-telescope/telescope-fzf-native.nvim",
+                build = "make",
+            },
+        },
+        config = function()
+            vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Telescope find files" })
+            vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "Telescope live grep" })
+            vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Telescope buffers" })
+            vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, { desc = "Telescope help tags" })
+            vim.keymap.set("n", "<leader>en", function()
+                require("telescope.builtin").find_files {
+                    cwd = vim.fn.stdpath("config")
+                }
+            end, { desc = "Telescope edit neovim config" })
+        end
     },
 
 })
